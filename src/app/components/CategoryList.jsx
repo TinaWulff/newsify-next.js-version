@@ -1,18 +1,25 @@
 
-
+'use client'
 
 import Image from 'next/image';
 import Article from './article';
+import { useState } from 'react';
 
 export default function CategoryList({ category, articles }) {
+  const [open, setOpen] = useState(false);
+
+
   return (
     <>
-    <li>
+    <li onClick={() => setOpen(!open)}
+    style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px'}}
+    >
       <Image src="/imgs/newsify_logo.svg" alt="Logo" width={50} height={100} />
       <h4>{category.charAt(0).toUpperCase() + category.slice(1)}</h4>
     </li>
-    
-      <ul className="articles-container"> {/* section til at hente artikler ind i */}
+    {open && (
+      <ul style={{ display: 'flex', flexDirection: 'column' }}
+      className="articles-container">  {/* section til at hente artikler ind i */}
         {articles && articles.length > 0 ? (
           articles.slice(0, 5).map((article, index) => (
             <Article key={index} article={article} />
@@ -21,21 +28,9 @@ export default function CategoryList({ category, articles }) {
           <p>No articles available for {category}</p>
         )}
       </ul>
+    )}
     </>
   );
 }
 
-     // Fetch artikler
-            // let articles;
-            // if (route === "#popular") {
-            //     articles = await fetchPopularData(key);
-            // } else if (route === "" || route === "#home") {
-            //     articles = await fetchlatestNews(key); 
-            // } else if (route === "#archive") {
-            //     const savedArticles = JSON.parse(localStorage.getItem("savedArticles")) || [];
-            //     // Filtrér kun artikler der matcher den aktuelle kategori
-            //     articles = savedArticles.filter(article => article.category === key);
-            // } else {
-            //     console.warn("Ukendt route, ingen fetch udført");
-            //     return;
-            // }
+   

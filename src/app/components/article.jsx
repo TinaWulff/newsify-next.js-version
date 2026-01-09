@@ -9,9 +9,10 @@ export default function Article({ article }) {
     : '/imgs/newsify_logo.svg';
   
   return (
-    <li>
-    <article>
-      <Link href={article.url} target="_blank">
+    <li style={{ marginBottom: '1em' }}>
+    <article >
+      <Link style={{ textDecoration: 'none', color: 'black', display: 'flex', gap : '1em' }}
+       href={article.url} target="_blank">
         <Image 
           src={imageUrl} 
           alt="article image" 
@@ -19,8 +20,14 @@ export default function Article({ article }) {
           height={200}
           style={{ objectFit: 'cover' }} // tilføj til stylesfil i stedet?
         />
-        <h3>{article.title}</h3>
-        <p>{article.abstract}...</p>
+        <div>
+        <h3 style={{ marginBottom: '1em' }}>
+            {article.title}
+        </h3>
+        <p>
+            {article.abstract}...
+        </p>
+        </div>
       </Link>
     </article>
     </li>

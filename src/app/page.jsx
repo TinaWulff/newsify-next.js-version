@@ -3,7 +3,7 @@ import fetchHomeNews from './utilities/home-fetch';
 
 export default async function Home() {
   // Definer de kategorier du vil vise
-  const categories = ['world', 'business', 'technology', 'sports'];
+  const categories = ['world', 'health', 'arts', 'technology', 'sports'];
   
   // Fetch data for hver kategori
   const categoryData = await Promise.all(
