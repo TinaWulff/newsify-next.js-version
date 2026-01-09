@@ -1,4 +1,4 @@
-import CategoryList from '../components/CategoryListx';
+import CategoryList from '../components/CategoryList';
 import fetchPopularNews from '../utilities/popular-fetch';
 
 export default async function Popular() {

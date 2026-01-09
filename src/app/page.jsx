@@ -1,4 +1,4 @@
-import CategoryList from './components/CategoryListx';
+import CategoryList from './components/CategoryList';
 import fetchHomeNews from './utilities/home-fetch';
 
 export default async function Home() {
