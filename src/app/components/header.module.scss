@@ -1,0 +1,53 @@
+@use '../styles/colors' as *;
+
+.header{
+    display: flex;
+    border-bottom: 1px solid #C5C5C5;
+    justify-items: center;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+
+    padding: 1em 0;
+    width: 100%;
+}
+
+.header .logo {
+    // display: flex;
+    // gap: 0.5em;
+    justify-content: center;
+    justify-self: center;
+    //padding: 2em 0;
+    height: 2em;
+}
+
+.headline {
+    font-size: 24px;
+    font-weight: bolder;
+    color: $text-general;
+}
+
+.dynamic-headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2em;
+   
+
+    // h2 {
+    //     color: $design-color;
+    //     font-size: 32px;
+    //     font-weight: bold;
+    //     font-family: "open sans", sans-serif;
+    //     margin-bottom: 0.5em;
+    // }
+
+    // h3 {
+    //     font-size: 20px;
+    //     color: $text-general;
+    //     font-weight: 600;
+    //     font-family: "open sans", sans-serif;
+    // }
+}
+
+

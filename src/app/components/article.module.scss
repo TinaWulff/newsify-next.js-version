@@ -1,0 +1,63 @@
+///// ARTIKLER //////
+.articles-container {
+    max-width: 100%;
+    grid-column: span 3;
+    margin: 0 1.4em;
+    //border-top: 1px solid #C5C5C5;
+}
+
+.article {
+max-width: 100%;
+//padding: 1em 0.5em;
+transition: transform 0.3s ease;
+position: relative;
+touch-action: none;
+
+
+&:first-of-type {
+    margin-top: 0.5em;
+}
+
+&:hover {
+    transform: scale(1.05);
+    z-index: 1; 
+}
+
+.fa-bookmark {
+font-size: 3em;
+}
+
+    a {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        column-gap: 1em;
+
+
+    .article-img {
+        max-width: 100%;
+        grid-column: 1;
+        border-radius: 15px;
+        grid-row: span 2;
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: bold;
+        grid-column: 2;
+        font-family: "Playfair Display", serif;;
+    }
+
+    p{
+        font-size: 14px;
+        font-weight: 300;
+        grid-column: 2;
+        font-family: "open sans", sans-serif;
+    }
+
+
+}
+}
