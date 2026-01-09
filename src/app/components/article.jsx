@@ -9,6 +9,7 @@ export default function Article({ article }) {
     : '/imgs/newsify_logo.svg';
   
   return (
+    <li>
     <article>
       <Link href={article.url} target="_blank">
         <Image 
@@ -22,6 +23,7 @@ export default function Article({ article }) {
         <p>{article.abstract}...</p>
       </Link>
     </article>
+    </li>
   );
 }
       {/*className={styles.articleImg} //ret klassenavn i styles-fil */}

@@ -6,10 +6,13 @@ import Article from './article';
 
 export default function CategoryList({ category, articles }) {
   return (
+    <>
     <li>
       <Image src="/imgs/newsify_logo.svg" alt="Logo" width={50} height={100} />
       <h4>{category.charAt(0).toUpperCase() + category.slice(1)}</h4>
-      <section className="articles-container"> {/* section til at hente artikler ind i */}
+    </li>
+    
+      <ul className="articles-container"> {/* section til at hente artikler ind i */}
         {articles && articles.length > 0 ? (
           articles.slice(0, 5).map((article, index) => (
             <Article key={index} article={article} />
@@ -17,8 +20,8 @@ export default function CategoryList({ category, articles }) {
         ) : (
           <p>No articles available for {category}</p>
         )}
-      </section>
-    </li>
+      </ul>
+    </>
   );
 }
 
