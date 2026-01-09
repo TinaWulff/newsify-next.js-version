@@ -16,11 +16,11 @@ export default function Article({ article }) {
         <Image 
           src={imageUrl} 
           alt="article image" 
-          width={300} 
-          height={200}
-          style={{ objectFit: 'cover' }} // tilføj til stylesfil i stedet?
+          width={120} 
+          height={120}
+          style={{ objectFit: 'cover', borderRadius: '15px' }}
         />
-        <div>
+        <div  style={{ alignContent: 'center' }}>
         <h3 style={{ marginBottom: '1em' }}>
             {article.title}
         </h3>
